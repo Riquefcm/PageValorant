@@ -1,0 +1,122 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.carrossel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.informacoes {
+  display: none;
+}
+
+.informacoes.ativa {
+  display: block;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 100vh;
+}
+
+.informacoes h1 {
+  font-size: 55px;
+  color: #ffffff;
+  margin-bottom: 80px;
+  font-family: Permanent Marker;
+  letter-spacing: 8px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+.informacoes .descricao {
+  width: 49%;
+  font-size: 24px;
+  color: #ffffff;
+  line-height: 40px;
+  height: 300px;
+  overflow: auto;
+  padding-right: 35px;
+  font-family: "Tenor Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Shadows+Into+Light&family=Tenor+Sans&display=swap');
+
+.botoes-carrossel {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.botoes-carrossel .botao {
+  background-color: transparent;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  cursor: pointer;
+  border-color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2)
+}
+
+
+
+.botoes-carrossel .botao.selecionado {
+  background-color: #1d8346;
+  transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.imagem {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  display: none;
+}
+
+.imagem.ativa {
+  display: block;
+  animation: mudarImagem 0.7s;
+}
+
+@keyframes mudarImagem {
+  from {
+    opacity: 0.85;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+main:after {
+  content: '123';
+  min-height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 0.05926120448179273) 50%,
+    rgba(0, 0, 0, 1) 90%
+  );
+  z-index: -1;
+}
